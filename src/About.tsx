@@ -1,0 +1,17 @@
+"use server-entry";
+
+import "./client";
+
+export function About() {
+  return (
+    <html>
+      <head>
+        <title>About</title>
+      </head>
+      <body>
+        <h1>About</h1>
+        <a href="/">Home</a>
+      </body>
+    </html>
+  );
+}

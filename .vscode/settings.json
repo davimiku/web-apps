@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "workbench.editor.labelFormat": "short",
+  "breadcrumbs.filePath": "on",
+  "eslint.rules.customizations": [{ "rule": "*", "severity": "warn" }]
+}
