@@ -1,30 +1,18 @@
 import { callAction, renderRequest } from "@parcel/rsc/node";
 import express from "express";
-
-// Page components. These must have "use server-entry" so they are treated as code splitting entry points.
-import { About } from "./About";
+import path from "node:path";
 import { Home } from "./Home";
-
 import { router as listsRouter } from "./listmates/router";
 
 const app = express();
 
 app.use(express.static("dist"));
 
+const staticPath = path.join(__dirname, "static");
+app.use("/static", express.static(staticPath));
+
 app.get("/", async (req, res) => {
   await renderRequest(req, res, <Home />, { component: Home });
-});
-
-// app.use((req, res, next) => {
-//   if (!req.path.endsWith("/") && !req.path.includes(".")) {
-//     res.redirect(301, req.path + "/");
-//   } else {
-//     next();
-//   }
-// });
-
-app.get("/about", async (req, res) => {
-  await renderRequest(req, res, <About />, { component: About });
 });
 
 app.use("/listmates", listsRouter);

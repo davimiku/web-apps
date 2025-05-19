@@ -1,6 +1,6 @@
 import { Kysely, PostgresDialect } from "kysely";
 import { Pool } from "pg";
-import { ListItemTable, ListTable } from "../listmates/table.ts";
+import { ListItemTable, ListTable } from "../listmates/tables.ts";
 
 export const randomId = () =>
   Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
@@ -21,6 +21,7 @@ const dialect = new PostgresDialect({
 
 export const db = new Kysely<Database>({
   dialect,
+  log: ["query", "error"],
 });
 
 export type Database = {
