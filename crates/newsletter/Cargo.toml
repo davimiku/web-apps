@@ -1,0 +1,8 @@
+[package]
+edition = "2024"
+name = "newsletter"
+version = "0.1.0"
+
+[dependencies]
+axum = { version = "0.8.4", features = ["json"] }
+database = { path = "../database" }

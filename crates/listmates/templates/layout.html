@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>{% block title %}{{ title }} - My Site{% endblock %}</title>
+        <base href="http://localhost:3000/listmates/" />
+        {% block head %} {% endblock %}
+    </head>
+    <body>
+        <div id="content">{% block content %} {% endblock %}</div>
+        <footer>Common Footer</footer>
+    </body>
+</html>

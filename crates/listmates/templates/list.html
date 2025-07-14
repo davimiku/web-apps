@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+<!-- Title Start -->
+
+{% block title %} {{ list.name}} | Listmates {% endblock %}
+
+<!-- Head Start -->
+
+{% block head %}
+<style></style>
+{% endblock %}
+
+<!-- Content Start -->
+
+{% block content %}
+
+<h2>{{ list.name }}</h2>
+
+<p>{{ list.description | or_empty }}</p>
+
+<section>
+    List Items Start
+
+    <ul>
+        {% for item in list.items %}
+        <li>{{ item.description }}</li>
+        {% endfor %}
+    </ul>
+
+    List Items End
+</section>
+{% call super() %} {% endblock %}

@@ -1,0 +1,19 @@
+[package]
+edition = "2024"
+name = "app-server"
+version = "0.1.0"
+
+[dependencies]
+database = { path = "../database" }
+listmates = { path = "../listmates" }
+newsletter = { path = "../newsletter" }
+
+axum = "0.8.4"
+listenfd = "1.0.2"
+serde = { version = "1.0.219", features = ["derive"] }
+tokio = { version = "1.46.1", features = ["full"] }
+tower = { version = "0.5.2", features = ["util", "timeout"] }
+tower-http = { version = "0.6.6", features = ["add-extension", "trace"] }
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
+uuid = { version = "1.17.0", features = ["serde", "v4"] }

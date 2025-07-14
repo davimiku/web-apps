@@ -1,0 +1,13 @@
+[package]
+edition = "2024"
+name = "listmates"
+version = "0.1.0"
+
+[dependencies]
+database = { path = "../database" }
+error-handling = { path = "../error-handling" }
+
+askama = "0.14.0"
+axum = { version = "0.8.4", features = ["json"] }
+tracing = "0.1.41"
+uuid = { version = "1.17.0", features = ["serde", "v4"] }
