@@ -1,0 +1,8 @@
+# Files for "cargo watch" reloading on changes
+crates/app-server/.reload-trigger
+
+# Build output
+target
+
+# Environment
+.env

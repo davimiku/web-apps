@@ -1,0 +1,6 @@
+[formatting]
+align_comments = false
+reorder_keys = true
+
+include = ["Cargo.toml", "crates/**/*.toml"]
+# exclude = ["vendor/**/*.toml"]

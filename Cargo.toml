@@ -1,0 +1,11 @@
+[workspace]
+members = ["crates/*", "tests/*"]
+resolver = "3"
+
+[profile.dev.package.sqlx-macros]
+# Optimize sqlx macros to improve incremental compiler performance
+opt-level = 3
+
+[profile.dev.package.askama_derive]
+# Optimize askama macros to improve incremental compiler performance
+opt-level = 3
